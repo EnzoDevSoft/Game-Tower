@@ -31,7 +31,7 @@ var Stage = /** @class */ (function () {
         this.camera.position.y = 2;
         this.camera.position.z = 2;
         this.camera.lookAt(new THREE.Vector3(0, 0, 0));
-        //light
+        
         this.light = new THREE.DirectionalLight(0xffffff, 0.5);
         this.light.position.set(0, 499, 0);
         this.scene.add(this.light);
@@ -75,7 +75,7 @@ var Block = /** @class */ (function () {
         this.position.y = this.dimension.height * this.index;
         this.position.z = this.targetBlock ? this.targetBlock.position.z : 0;
         this.colorOffset = this.targetBlock ? this.targetBlock.colorOffset : Math.round(Math.random() * 100);
-        // set color
+        
         if (!this.targetBlock) {
             this.color = 0x333344;
         }
